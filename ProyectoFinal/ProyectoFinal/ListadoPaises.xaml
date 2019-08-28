@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal.ListadoPaises"
+             BackgroundColor="#f3f3e9">
+    
+    <ContentPage.Content>
+        
+        <StackLayout Orientation="Vertical">
+
+            <ListView x:Name="listViewDatos"
+                      IsPullToRefreshEnabled="True"
+                      IsRefreshing="{Binding IsBusy}"
+                      ItemsSource="{Binding Datos}"
+                      RefreshCommand="{Binding RefrescarCommand}"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal"
+                                         Margin="10"
+                                         Padding="0"
+                                
+                                         HorizontalOptions="Center" 
+                                         VerticalOptions="Center">
+                                
+                                <Label TextColor="Black" Text="{Binding Mombre}" />
+                                <Label TextColor="Black" Text="{Binding AlphaCode}" Margin="0" HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mapas="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="ProyectoFinal.DetallePaises"
+             BackgroundColor="#f3f3e9">
+    
+    <ContentPage.Content>
+       <StackLayout Orientation="Vertical" Margin="20">
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Nombre:" />
+                        <Label Text="{Binding Nombre}" />
+                    </StackLayout>
+            
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="AlphaCode:" />
+                        <Label Text="{Binding AlphaCode}" />
+                    </StackLayout>
+            
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Capital:" />
+                        <Label Text="{Binding Capital}" />
+                    </StackLayout>
+                        
+                    <!-- <Image VerticalOptions="Center" HeightRequest="100" Aspect="Fill"> -->
+                    <!--    <Image.Source> -->
+                    <!--        <OnPlatform x:TypeArguments="FileImageSource" Android="icon" iOS="icon" /> -->
+                    <!--    </Image.Source> -->
+                    <!-- </Image> -->
+                    
+                </StackLayout>
+            </ScrollView>
+
+            <!-- <mapas:Map BackgroundColor="Silver"
+                    x:Name="Mapa" MapType="Street" HasZoomEnabled="true" HasScrollEnabled="true" 
+                    VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" /> -->
+         </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
